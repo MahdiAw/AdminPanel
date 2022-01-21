@@ -1,0 +1,2 @@
+class SocialData:
+    print("hello")

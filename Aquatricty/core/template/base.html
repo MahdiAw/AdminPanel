@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+<head>
+
+	<title>{% block title %}{% endblock %}</title>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base_style.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    {% block js_and_css%}
+    
+    {% endblock %}
+	<script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+
+</head>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle" style=> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <img src="{% static 'images/Aquatricitylogo.svg'%}" alt=""> </div>
+    </header>
+    <div class="l-navbar" id="nav-bar" style="background-image:url('../static/images/nav-bg.jpg">
+        <nav class="nav" >
+            <div> 
+            <a href={% url 'home' %} class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Aquatricity</span> </a>
+                {% block leftnav %}
+                {% endblock %}
+                </div>
+            </div> 
+            <a href="/admin/" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div class="height-100 bg-light">
+    {% block content %}
+       
+    {% endblock %}
+    </div>
+</html>

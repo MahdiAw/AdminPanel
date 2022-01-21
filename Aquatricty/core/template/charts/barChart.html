@@ -1,0 +1,72 @@
+
+
+
+
+<canvas id="barChart" width="400" height="400"></canvas>
+
+<script>
+var Socialname ={{ social_name | safe}}
+var Socialcount ={{ social_count | safe}}
+
+var ctx = document.getElementById('barChart');
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: Socialname,
+        datasets: [{
+          label: "Social media count",
+          tension: 0.4,
+          borderWidth: 0,
+          pointRadius: 0,
+          backgroundColor: "#fff",
+          data:Socialcount],
+          maxBarThickness: 6
+        }, ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: true,
+          mode: "index",
+          intersect: false,
+        },
+        scales: {
+          yAxes: [{
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              suggestedMin: 0,
+              suggestedMax: 500,
+              beginAtZero: true,
+              padding: 0,
+              fontSize: 14,
+              lineHeight: 3,
+              fontColor: "#fff",
+              fontStyle: 'normal',
+              fontFamily: "Open Sans",
+            },
+          }, ],
+          xAxes: [{
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              display: false,
+              padding: 20,
+            },
+          }, ],
+        },
+      },
+    });
+
+
+
+</script>
+ 
+

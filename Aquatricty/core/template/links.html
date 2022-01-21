@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block js_and_css%}
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+   <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+   <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+   
+   <script src="{% static 'js/42d5adcbca.js' %}" crossorigin="anonymous"></script>
+   <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+   <link id="pagestyle" href="{% static 'css/soft-ui-dashboard.css' %}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block leftnav %}
+   <div class="nav_list"> <a href="/admin" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="/emails" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Emails</span> </a> <a href="/map" class="nav_link"><i class="bi bi-map" style="font-size: 1.2rem;"></i><span class="nav_name">map</span> </a> <a href=
+   "#" class="nav_link"> <i class="bi bi-link" style="font-size: 1.75rem;"></i><span class="nav_name">Links</span> </a> <a href="/ip_table" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Ip address</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="container-fluid" >
+<div class="row">
+<table class="table table-striped table-hover" style="background-color:#d1feff" >
+  <thead style="background-color:#570ac9;color:white;">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">social medial referral links</th>
+    </tr>
+   </thead>
+
+   <tbody>
+
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+      
+      <tr>
+         <th scope="row" style="color:black">Facebook</th>
+         <td style="color:black">http://127.0.0.1:8000/1</td>
+
+      </tr>
+      <tr>
+         <th scope="row" style="color:black">Instagram</th>
+         <td style="color:black">http://127.0.0.1:8000/2</td>
+      </tr>
+      <tr>
+         <th scope="row" style="color:black" >Twitter</th>
+         <td style="color:black">http://127.0.0.1:8000/3</td>
+      </tr>
+      <tr>
+         <th scope="row" style="color:black" >Youtube</th>
+         <td style="color:black">http://127.0.0.1:8000/4</td>
+      </tr>
+      <tr>
+         <th scope="row" style="color:black">other</th>
+         <td style="color:black">http://127.0.0.1:8000/5</td>
+      </tr>
+   </tbody>
+</div>
+
+</div>
+
+{% endblock %}
+
+
+

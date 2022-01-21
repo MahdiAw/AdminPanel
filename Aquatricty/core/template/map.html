@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block js_and_css%}
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+   <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+   <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+   <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+
+   <script src="{% static 'js/42d5adcbca.js' %}" crossorigin="anonymous"></script>
+   <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+   <link id="pagestyle" href="{% static 'css/soft-ui-dashboard.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block title%}
+map
+{% endblock%}
+
+{% block leftnav %}
+   <div class="nav_list"> <a href="/admin" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> <a href="/emails" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Emails</span> </a> <a href="#" class="nav_link"><i class="bi bi-map" style="font-size: 1.2rem;"></i><span class="nav_name">map</span> </a> <a href=
+   "/links" class="nav_link"> <i class="bi bi-link" style="font-size: 1.75rem;"></i><span class="nav_name">Links</span> </a> <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">ip address</span> </a> <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+    <div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Beirut" width="1200" height="700" frameborder="0" style="border:1" allowfullscreen></iframe>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+
